@@ -93,11 +93,4 @@ function processData(addToVisualizationCallback) {
 
     return processData;
 }
-    
 
-function getData(addToVisualizationCallback) {
-    queue()
-	.defer(d3.json, "http://www.cis.umassd.edu/~dkoop/dsc530-2016sp/a4/wi-county.geojson")
-	.defer(d3.tsv, "http://www.cis.umassd.edu/~dkoop/dsc530-2016sp/a4/wi-county-pop.tsv")
-	.await(processData(addToVisualizationCallback));
-}
